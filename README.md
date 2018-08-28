@@ -7,7 +7,7 @@ UDDF format (http://uddf.org/) is used by most Dive Log softwares while few of t
 use Python 3
 
 ```
-Fit2UDDF.py -i <fit_file> -o <uddf_file>
+python Fit2UDDF.py -i <fit_file> -o <uddf_file>
 ```
 * <fit_file>: Your Fit full file path
 * <uddf_file>: The output UDDF file path
@@ -55,7 +55,7 @@ git clone https://github.com/SPD13/Fit2UDDF.git
 * run the script
 ```
 cd Fit2UDDF
-Fit2UDDF.py -i <fit_file> -o <uddf_file>
+python3 Fit2UDDF.py -i <fit_file> -o <uddf_file>
 ```
 
 Features
