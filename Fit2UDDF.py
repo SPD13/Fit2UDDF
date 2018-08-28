@@ -126,8 +126,8 @@ def main(argv):
         if record.name == 'session':  # Lat/Long
             decoder.load_rec(record)
             uddf_geography = ET.Element("geography")
-            ET.SubElement(uddf_geography, "latitude").text = decoder.fields["start_position_lat"]
-            ET.SubElement(uddf_geography, "longitude").text = decoder.fields["start_position_long"]
+            ET.SubElement(uddf_geography, "latitude").text = "{:.8f}".format(int(decoder.fields["start_position_lat"]) * (180/2**31))
+            ET.SubElement(uddf_geography, "longitude").text = "{:.8f}".format(int(decoder.fields["start_position_long"]) * (180/2**31))
             uddf_site.append(uddf_geography)
         if record.name == 'dive_gas':  # Dive Gas
             decoder.load_rec(record)
