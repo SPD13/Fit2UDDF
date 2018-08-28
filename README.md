@@ -9,6 +9,54 @@ use Python 3
 ```
 Fit2UDDF.py -i <fit_file> -o <uddf_file>
 ```
+* <fit_file>: Your Fit full file path
+* <uddf_file>: The output UDDF file path
+
+Dependencies
+-----------------------------------
+This script is using FitParse Python library to parse `.FIT` files
+but, it needs the modified version by xplwowi to take into account the Garmin Descent MK1 Specific fields.
+You can find it there:
+https://github.com/xplwowi/python-fitparse
+
+Install
+-----------------------------------
+* Install python 3
+* Download FitParse modified version from https://github.com/xplwowi/python-fitparse
+* Install FitParse modified lib:
+```
+python setup.py install
+```
+
+Fresh install on Mac-OS
+-----------------------------------
+* Follow the tutorial here to install Python 3: https://docs.python-guide.org/starting/install3/osx/
+* Create a workspace dir
+```
+mkdir python-workspace
+```
+* clone FitParse
+```
+git clone https://github.com/xplwowi/python-fitparse
+```
+* Install FitParse
+```
+cd python-fitparse
+sudo python3 setup.py install
+```
+* Go back to your workspace dir
+```
+cd ..
+```
+* clone  Fit2UDDF
+```
+git clone https://github.com/SPD13/Fit2UDDF.git
+```
+* run the script
+```
+cd Fit2UDDF
+Fit2UDDF.py -i <fit_file> -o <uddf_file>
+```
 
 Features
 -----------------------------------
